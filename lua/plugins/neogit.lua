@@ -11,6 +11,9 @@ return {
     "folke/snacks.nvim",             -- optional
   },
   config = function()
-    require('neogit').setup({})
+    require('neogit').setup({
+      kind = "floating",
+      commit_popup = { kind = "floating" },
+    })
   end,
 }
