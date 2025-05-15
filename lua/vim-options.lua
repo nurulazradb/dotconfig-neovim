@@ -42,3 +42,7 @@ vim.o.conceallevel=2
 -- vim.g.mapleader = ' '
 -- vim.g.maplocalleader = ' '
 
+-- folding with treesitter
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+
