@@ -1,25 +1,26 @@
 -- Set highlight on search
-vim.o.hlsearch = true
+vim.opt.hlsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
-vim.o.relativenumber = true
+vim.opt.relativenumber = true
+vim.opt.scrolloff = 8
 
 -- Disable mouse mode
--- vim.o.mouse = ''
+-- vim.opt.mouse = ''
 
 -- Enable break indent
-vim.o.breakindent = true
+vim.opt.breakindent = true
 
 -- Save undo history
-vim.o.undofile = true
+vim.opt.undofile = true
 
 -- Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Decrease update time
-vim.o.updatetime = 250
+vim.opt.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
@@ -30,10 +31,10 @@ vim.wo.signcolumn = 'yes'
 vim.opt.clipboard = 'unnamedplus'
 
 -- Set completeopt to have a better completion experience
--- vim.o.completeopt = 'menuone,noselect'
+-- vim.opt.completeopt = 'menuone,noselect'
 
 -- Concealer for Neorg
-vim.o.conceallevel=2
+vim.opt.conceallevel=2
 
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
@@ -43,6 +44,10 @@ vim.o.conceallevel=2
 -- vim.g.maplocalleader = ' '
 
 -- folding with treesitter
-vim.o.foldmethod = "expr"
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 1
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+vim.opt.cursorline = true
+vim.cmd("highlight CursorLine guibg=#44475A") -- Subtle dark gray for soft contrast
 
